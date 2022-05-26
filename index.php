@@ -16,25 +16,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-<body>
+<body class="bg-danger">
     <div class="container">
-    <form class="row g-3 bg-info p-3 mt-3">
+    <form method="POST"  action="user_data.php" class="row g-3 bg-info p-3 mt-3">
         <h1 class="text-center m-3">Registration form</h1>
   <div class="col-md-8">
     <label class="form-label">Name</label>
-    <input type="text" class="form-control" placeholder="Surname first" name="name">
+    <input type="text" class="form-control" placeholder="Surname first" name="name" required >
   </div>
   <div class="col-md-4">
     <label class="form-label">Email</label>
-    <input type="email" class="form-control" placeholder="abc@xyz.com" name="email">
+    <input type="email" class="form-control" placeholder="abc@xyz.com" name="email" required>
   </div>
   <div class="col-5">
     <label class="form-label">Date of Birth</label>
-    <input type="date" class="form-control name="dob">
+    <input type="date" class="form-control" name="dob" required>
   </div>
   <div class="col-7">
     <label for="inputState" class="form-label">Gender</label>
-    <select id="inputState" class="form-select">
+    <select id="inputState" class="form-select" name="gender" required>
+    <option selected disabled >Select your Gender</option>
       <option value="Male">Male</option>
       <option value="Female">Female</option>
       <option value="I prefer not to answer">I prefer not to answer</option>
@@ -44,8 +45,8 @@
 
   <div class="col-12">
     <label for="inputState" class="form-label">Country</label>
-    <select id="inputState" class="form-select">
-      <option value="Nigeria">Nigeria</option>
+    <select id="inputState" class="form-select" name="country" required>
+      <option selected value="Nigeria">Nigeria</option>
       <option value="Ethiopia">Ethiopia</option>
       <option value="Egypt">Egypt</option>
       <option value="Congo">Congo</option>
