@@ -10,7 +10,7 @@ $userdata = $_POST;
 $data = implode(" ",$userdata);
 
 $file = "./userdata.csv" ;
-$handle = fopen($file, "w");
+$handle = fopen($file, "a");
 fwrite($handle, "$data");
 fclose($handle);
 
